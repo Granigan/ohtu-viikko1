@@ -136,7 +136,7 @@ public class VarastoTest {
     public void secondConstructorTest4() {
         Varasto v = new Varasto(10.0, 15.0);
         assertEquals(v.getSaldo(), 10.0, vertailuTarkkuus);
-        assertEquals(v.getTilavuus(), 10501410.0, vertailuTarkkuus);
+        assertEquals(v.getTilavuus(), 10.0, vertailuTarkkuus);
     }
 
 }
