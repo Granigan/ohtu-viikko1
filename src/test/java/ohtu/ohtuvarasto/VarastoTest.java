@@ -65,4 +65,78 @@ public class VarastoTest {
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
     }
 
+    @Test
+    public void constructor1() {
+        Varasto v = new Varasto(1.1);
+        assertEquals(v.getTilavuus(), 1.1, vertailuTarkkuus);
+    }
+
+    @Test
+    public void constructor2() {
+        Varasto v = new Varasto(0.0);
+        assertEquals(v.getTilavuus(), 0.0, vertailuTarkkuus);
+    }
+
+    @Test
+    public void constructor3() {
+        Varasto v = new Varasto(-1.0);
+        assertEquals(v.getTilavuus(), 0.0, vertailuTarkkuus);
+    }
+
+    @Test
+    public void toStringtest() {
+        assertEquals(varasto.toString(), "saldo = 0.0, vielä tilaa 10.0");
+    }
+
+    @Test
+    public void lisaaVarastoonTest1() {
+        varasto.lisaaVarastoon(-10.0);
+        assertEquals(varasto.getSaldo(), 0.0, vertailuTarkkuus);
+    }
+
+    @Test
+    public void lisaaVarastoonTest2() {
+        varasto.lisaaVarastoon(100.0);
+        assertEquals(varasto.getSaldo(), 10.0, vertailuTarkkuus);
+    }
+
+    @Test
+    public void otaVarastostaTest1() {
+        varasto.otaVarastosta(-10.0);
+        assertEquals(varasto.getSaldo(), 0.0, vertailuTarkkuus);
+    }
+
+    @Test
+    public void otaVarastostaTest2() {
+        varasto.otaVarastosta(100.0);
+        assertEquals(varasto.getSaldo(), 0.0, vertailuTarkkuus);
+    }
+    
+    @Test
+    public void secondConstructorTest1() {
+        Varasto v = new Varasto(10.0, 5.0);
+        assertEquals(v.getSaldo(), 5.0, vertailuTarkkuus);
+        assertEquals(v.getTilavuus(), 10.0, vertailuTarkkuus);
+    }
+
+    @Test
+    public void secondConstructorTest2() {
+        Varasto v = new Varasto(-10.0, 5.0);
+        assertEquals(v.getTilavuus(), 0.0, vertailuTarkkuus);
+    }
+
+    @Test    
+    public void secondConstructorTest3() {
+        Varasto v = new Varasto(10.0, -5.0);
+        assertEquals(v.getSaldo(), 0.0, vertailuTarkkuus);
+        assertEquals(v.getTilavuus(), 10.0, vertailuTarkkuus);
+    }
+
+    @Test    
+    public void secondConstructorTest4() {
+        Varasto v = new Varasto(10.0, 15.0);
+        assertEquals(v.getSaldo(), 10.0, vertailuTarkkuus);
+        assertEquals(v.getTilavuus(), 10.0, vertailuTarkkuus);
+    }
+
 }
