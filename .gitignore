@@ -6,3 +6,5 @@ gradle.properties
 /dep_injection/.nb-gradle/
 /src/.nb-gradle/
 /dep_injection/build/
+/nhl/.nb-gradle/
+/nhl/build/
