@@ -3,3 +3,6 @@
 /.gradle/
 /.nb-gradle/
 gradle.properties
+/dep_injection/.nb-gradle/
+/src/.nb-gradle/
+/dep_injection/build/
