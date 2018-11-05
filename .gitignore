@@ -8,3 +8,5 @@ gradle.properties
 /dep_injection/build/
 /nhl/.nb-gradle/
 /nhl/build/
+/nhl/.gradle/
+/src/.gradle/
