@@ -10,3 +10,6 @@ gradle.properties
 /nhl/build/
 /nhl/.gradle/
 /src/.gradle/
+/ohtu-viikko1/week2_task1/.gradle/
+/week2_task1/.gradle/
+/ohtu-viikko1/week2_task1/build/
